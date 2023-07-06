@@ -1,0 +1,30 @@
+<nav>
+    <ul>
+        <% if(home !== undefined && home !== true){ %>
+            <li><a class = 'btn' href="/">Home</a></li>
+        <% } %>
+        
+        <% if(user){ %>
+            <% if(isAllowedSecret){ %>
+                <li><a class = 'btn' href="/secret">Secret</a></li>
+            <% } %>
+            <li>
+                <form action="/logout" method="post">
+                    <input class='btn' type="submit" value="Logout">
+                </form>
+            </li>
+        <% } else{ %>
+            <% if(register !== undefined && register !== true){ %>
+                <li><a class = 'btn' href="/register">Register</a></li>
+            <% } %>
+            
+            <% if(login !== undefined && login !== true){ %>
+                <li><a class = 'btn' href="/login">Login</a></li>
+            <% } %>
+            
+        <% }%>
+        
+        
+        
+    </ul>
+</nav>

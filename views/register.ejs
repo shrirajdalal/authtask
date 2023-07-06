@@ -1,0 +1,18 @@
+<%- include('./partials/header') %>
+
+    <h1>Register</h1>
+    
+<%- include('./partials/navigation') %>
+
+    <form action="/register" method="post">
+        <input id = 'username' type="text" name='username' placeholder = 'username' required>
+        <input id = 'password 'type="password" name='password' placeholder = 'enter password' required>
+        <input id = 'reenterpassword' type="password" name='reenterpassword' placeholder = 're-enter password' required>
+
+        <label for="isAllowedSecret"> Is Allowed Secret? &nbsp;
+            <input id = 'isAllowedSecret' type="checkbox" name='isAllowedSecret' value='true'>
+        </label>
+        <button type='submit' value='submit'>Sign-up!</button>
+    </form>
+
+<%- include('./partials/footer') %>

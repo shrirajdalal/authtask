@@ -1,0 +1,17 @@
+<%- include('./partials/header') %>
+
+    <h1>Homepage</h1>
+
+<%- include('./partials/navigation') %>
+
+    <% if(message){ %>
+        <p>Welcome <%=user%></p>
+        <p><%= message %></p>
+    <% } else{ %>
+        <p>This is a task to demonstrate the use of authentication and authorization using state management via sessions and cookies.</p>
+        <p>The usernames and hashed passwords are also stored in a connected database.</p>
+        <p>This can also be achieved with existing libraries such as passport js.</p>
+        <p>&#x2743;</p>
+    <% } %>
+
+<%- include('./partials/footer') %>
