@@ -30,7 +30,7 @@ app.use(session({
 
 // DATABASE - MongoDB Atlas
 // databasae url
-const dburl = 'mongodb+srv://shriraj:dalal@cluster0.trcszbj.mongodb.net/auth?retryWrites=true&w=majority'
+const dburl = 'mongodb+srv://<username>:<pass>@cluster0.trcszbj.mongodb.net/<database>?retryWrites=true&w=majority'
 
 // connection
 mongoose.connect(dburl,{
